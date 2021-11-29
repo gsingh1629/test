@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 # Set up the SQLAlchemy Database to be a local file 'desserts.db'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///desserts.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
 
